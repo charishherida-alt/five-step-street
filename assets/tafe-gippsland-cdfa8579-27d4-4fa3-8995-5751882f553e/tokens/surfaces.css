@@ -1,0 +1,31 @@
+/* Borders, rules, radii, shadow and motion.
+   The brand is square-cornered and flat: the style guide shows no rounded cards,
+   no drop shadows and no gradients. Radius and shadow tokens exist only for
+   screen affordances (form fields, focus rings) and stay near zero. */
+:root{
+  --radius-none:0px;
+  --radius-input:2px;
+  --radius-max:0px;
+
+  /* table rules, section 2.6 */
+  --border-hairline:.5pt; /* @kind spacing */
+  --border-thin:1px; /* @kind spacing */
+  /* colour blocking / underline rules */
+  --border-thick:4px; /* @kind spacing */
+  --border-band:12px; /* @kind spacing */
+
+  --shadow-none:none;
+  --shadow-image-scrim:0 0 0 rgba(0,0,0,0);
+  --scrim-dark:linear-gradient(to top,rgba(0,65,54,.72),rgba(0,65,54,0) 62%); /* @kind other */
+  --scrim-flat:rgba(18,27,33,.45); /* @kind color */
+
+  --focus-ring:0 0 0 2px var(--white),0 0 0 4px var(--green-3405);
+
+  --ease-standard:cubic-bezier(.2,0,.2,1); /* @kind other */
+  --duration-fast:120ms; /* @kind other */
+  --duration-base:200ms; /* @kind other */
+  --duration-slow:320ms; /* @kind other */
+
+  --opacity-hover:.85; /* @kind other */
+  --opacity-disabled:.4; /* @kind other */
+}
