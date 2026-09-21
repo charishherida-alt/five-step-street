@@ -1,0 +1,6 @@
+/* TAFE Gippsland webfonts.
+   Print/licensed primaries are Tiempos Text (display) and Graphik (body copy) — not
+   redistributable, so not included here. The style guide's own sanctioned web
+   substitutes are the Google fonts used on tafegippsland.edu.au: Martel (display)
+   and Lato (body). Those are what this design system loads. See readme.md. */
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;600;700;800&family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap");
