@@ -1,0 +1,44 @@
+/* Type scale transcribed from section 2.6 "Type paragraph styles".
+   Print sizes are in points; px values are the 1pt = 1.333px screen equivalents.
+   Kerning "optical -25" ≈ -0.025em. */
+:root{
+  --font-display:"Martel",Georgia,"Times New Roman",serif;      /* stands in for Tiempos Text */
+  --font-body:"Lato",Arial,Helvetica,sans-serif;                 /* stands in for Graphik */
+  --font-display-print:"Tiempos Text",Georgia,serif;
+  --font-body-print:"Graphik",Arial,sans-serif;
+
+  --weight-display-regular:400; /* @kind other */
+  --weight-display-medium:600;
+  --weight-body-regular:400;
+  --weight-body-medium:600;
+  --weight-body-semibold:700;
+  --weight-body-bold:700;
+  --weight-body-black:900;
+
+  /* Heading_01 — 50pt / 50pt leading, tracking -25 */
+  --size-h1:66.7px; --leading-h1:1; /* @kind other */ --track-h1:-.025em; /* @kind other */
+  /* Heading_02 — 35pt / 36pt */
+  --size-h2:46.7px; --leading-h2:1.03; /* @kind other */ --track-h2:-.01em; /* @kind other */
+  /* Intro body — Graphik Medium 12pt / 14pt */
+  --size-intro:16px; --leading-intro:1.17; /* @kind other */ --track-intro:-.025em; /* @kind other */
+  /* Sub heading_01 — Graphik Black 17pt / 17pt */
+  --size-sub1:22.7px; --leading-sub1:1; /* @kind other */ --track-sub1:-.02em; /* @kind other */
+  /* Sub heading_02 — Graphik Black 12pt / 13pt */
+  --size-sub2:16px; --leading-sub2:1.08; /* @kind other */ --track-sub2:-.015em; /* @kind other */
+  /* Sub heading_03 — Graphik Semibold 10pt / 11pt */
+  --size-sub3:13.3px; --leading-sub3:1.1; /* @kind other */ --track-sub3:-.025em; /* @kind other */
+  /* Body — Graphik Regular 9.5pt / 12pt */
+  --size-body:12.7px; --leading-body:1.26; /* @kind other */ --track-body:-.025em; /* @kind other */
+  /* Testimonial — Tiempos Regular 14pt / 15pt */
+  --size-quote:18.7px; --leading-quote:1.07; /* @kind other */ --track-quote:-.025em; /* @kind other */
+  --size-quote-mark:48px;
+  /* Captions — Graphik Regular 8pt / 9pt */
+  --size-caption:10.7px; --leading-caption:1.12; /* @kind other */ --track-caption:-.025em; /* @kind other */
+
+  /* Screen-scale ladder for slides, banners and web-scale work */
+  --size-display-xl:120px;
+  --size-display-lg:88px;
+  --size-display-md:56px;
+  --size-screen-body:20px;
+  --size-screen-small:15px;
+}
