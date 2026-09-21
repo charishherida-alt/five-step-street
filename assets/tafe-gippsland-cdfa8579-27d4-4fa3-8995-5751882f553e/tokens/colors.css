@@ -1,0 +1,78 @@
+/* Colour values transcribed verbatim from the TAFE Gippsland style guide
+   (0187_1121_TAFE Gippsland style guide_07), section 2.1.6 / 2.3 / 2.4.4 / 5.x. */
+:root{
+  /* ---- Primary palette: greens (PMS 3302 / 3415 / 3405 / 7488 / 366) ---- */
+  --green-3302:#004c46;
+  --green-3415:#00774c;
+  --green-3405:#00a769;
+  --green-7488:#7cc24d;
+  --green-366:#b8d87a;
+  /* Logo-sheet variant of PMS 3302 (section 2.1.6 quotes RGB 0,65,54) */
+  --green-logo:#004136;
+
+  /* ---- Neutrals ---- */
+  --warm-grey-1:#e4e1dc;   /* logo backgrounds, section 2.1.6 */
+  --warm-grey-2:#d7d2cb;   /* palette Warm Grey 1, section 2.3 */
+  --subtle-bg-light:#d3d2cd;
+  --subtle-bg-mid:#b8b6b0;
+  --ink:#121b21;           /* PMS 433 */
+  --white:#ffffff;
+
+  /* ---- Secondary palette: purple / magenta (2627, 526, 247, 239, 672) ---- */
+  --purple-2627:#3c1a52;
+  --purple-526:#742e89;
+  --magenta-247:#b43393;
+  --magenta-239:#e040af;
+  --pink-672:#e2a0c9;
+
+  /* ---- Secondary palette: red / orange / yellow (202, 207, 1655, 1495, 143) ---- */
+  --red-202:#8a2432;
+  --red-207:#ab0033;
+  --orange-1655:#ff4e00;
+  --orange-1495:#ff9016;
+  --yellow-143:#f6b436;
+
+  /* ---- Secondary palette: blues (2756, 2736, 285, 2995, 2985) ---- */
+  --blue-2756:#0f206c;
+  --blue-2736:#1226aa;
+  --blue-285:#0071ce;
+  --blue-2995:#00a8e2;
+  --blue-2985:#55c1e9;
+
+  /* ---- Sub brand palettes (sections 5.1, 5.2, 5.3) ---- */
+  --safetafe-green:#70d44b;
+  --safetafe-yellow:#f5b335;
+  --safetafe-black:#121b21;
+  --koorie-black:#121b21;
+  --koorie-red:#e82c2e;
+  --koorie-yellow:#f5b335;
+  --support-green-light:#70d44b;
+  --support-green-dark:#007f50;
+  --support-black:#121b21;
+
+  /* ---- Semantic aliases ---- */
+  --brand-primary:var(--green-3302);
+  --brand-accent:var(--magenta-247);
+  --text-heading:var(--green-3302);
+  --text-body:var(--ink);
+  --text-muted:#4d5a5f;
+  --text-on-dark:var(--white);
+  --text-caption:#5a6468;
+  --link:var(--green-3415);
+  --link-hover:var(--green-3302);
+  --surface-page:var(--white);
+  --surface-subtle:var(--warm-grey-1);
+  --surface-subtle-alt:var(--warm-grey-2);
+  --surface-dark:var(--green-3302);
+  --surface-accent:var(--magenta-247);
+  --rule:rgba(18,27,33,.4);        /* 0.5pt rules at -60% black, section 2.6 */
+  --rule-strong:rgba(18,27,33,.6);
+  --rule-on-dark:rgba(255,255,255,.35);
+  --button-bg:var(--green-3302);
+  --button-bg-hover:var(--green-3415);
+  --button-text:var(--white);
+
+  /* ---- Page turning device default pairings (section 2.4.3) ---- */
+  --turn-fold:var(--magenta-239);
+  --turn-shade:var(--purple-526);
+}
