@@ -1,0 +1,43 @@
+/* Spacing derives from the print margin system, sections 4.3 / 4.4.
+   Millimetre tokens are authoritative for print; px tokens are for screen work. */
+:root{
+  --mm-3:3mm; /* @kind spacing */
+  --mm-5:5mm; /* @kind spacing */
+  --mm-7:7mm; /* @kind spacing */
+  --mm-10:10mm; /* @kind spacing */
+  --mm-13:13mm; /* @kind spacing */
+  --mm-15:15mm; /* @kind spacing */
+  --mm-18:18mm; /* @kind spacing */
+  --mm-70:70mm; /* @kind spacing */
+
+  /* DL literature, full bleed (4.3.0) */
+  --dl-bleed:3mm; /* @kind spacing */
+  --dl-margin-side:7mm; /* @kind spacing */
+  --dl-margin-top:10mm; /* @kind spacing */
+  /* DL literature, no bleed / internal printing (4.3.4) */
+  --dl-nobleed-margin:5mm; /* @kind spacing */
+  /* A4 literature, full bleed (4.4.0) */
+  --a4-bleed:3mm; /* @kind spacing */
+  --a4-margin-side:18mm; /* @kind spacing */
+  --a4-margin-top:18mm; /* @kind spacing */
+  /* cover copy band depth */
+  --a4-cover-band:70mm; /* @kind spacing */
+  /* A4 no bleed (4.4.4) */
+  --a4-nobleed-margin:5mm; /* @kind spacing */
+  --a4-nobleed-side:13mm; /* @kind spacing */
+
+  /* Paragraph space-after values from section 2.6 */
+  --space-after-h1:9mm; /* @kind spacing */
+  --space-after-h2:5mm; /* @kind spacing */
+  --space-after-intro:3mm; /* @kind spacing */
+  --space-after-body:3mm; /* @kind spacing */
+  --space-after-bullet:1mm; /* @kind spacing */
+
+  /* Screen scale */
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px;
+  --space-5:24px; --space-6:32px; --space-7:48px; --space-8:64px;
+  --space-9:96px; --space-10:128px;
+
+  --measure-body:62ch; /* @kind other */
+  --measure-intro:46ch; /* @kind other */
+}
