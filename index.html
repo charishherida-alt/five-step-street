@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="assets/tafe-gippsland-cdfa8579-27d4-4fa3-8995-5751882f553e/tokens/fonts.css">
+<link rel="stylesheet" href="assets/tafe-gippsland-cdfa8579-27d4-4fa3-8995-5751882f553e/tokens/colors.css">
+<link rel="stylesheet" href="assets/tafe-gippsland-cdfa8579-27d4-4fa3-8995-5751882f553e/tokens/typography.css">
+<link rel="stylesheet" href="assets/tafe-gippsland-cdfa8579-27d4-4fa3-8995-5751882f553e/tokens/spacing.css">
+<link rel="stylesheet" href="assets/tafe-gippsland-cdfa8579-27d4-4fa3-8995-5751882f553e/tokens/surfaces.css">
+<link rel="stylesheet" href="assets/tafe-gippsland-cdfa8579-27d4-4fa3-8995-5751882f553e/styles.css">
+<script src="assets/tafe-gippsland-cdfa8579-27d4-4fa3-8995-5751882f553e/ds-bundle.js"></script>
+<style>
+  body { margin: 0; background: var(--white); }
+  a { color: var(--link); }
+  a:hover { color: var(--link-hover); }
+  .step-house:focus-visible { outline: 3px solid var(--green-3415); outline-offset: 3px; }
+  @keyframes streetGlow { 0%,100% { opacity: 0; } 45% { opacity: .55; } }
+</style>
+</helmet>
+<div style="font-family: var(--font-body); color: var(--text-body); max-width: 1140px; margin: 0 auto; padding: 32px 20px 40px;">
+  <h2 style="font-family: var(--font-display); font-weight: 500; color: var(--text-heading); font-size: clamp(24px, 3.4vw, 38px); line-height: 1.1; margin: 0 0 8px; letter-spacing: -.02em;">Your five steps</h2>
+  <p style="margin: 0 0 20px; max-width: 58ch; font-size: 16px; line-height: 1.5; color: var(--text-muted);">Select any house to open its module. The street lights up as you work through it.</p>
+
+  <div style="position: relative; border: 1px solid var(--rule); background: var(--white); overflow: hidden;">
+   <div style="position: relative; overflow: hidden;">
+    <div aria-hidden="true" style="position: absolute; inset: 0;">
+      <div style="position: absolute; inset: 0; background: var(--warm-grey-1);"></div>
+      <div style="position: absolute; left: 0; right: 0; bottom: 112px; height: 26px; background: var(--green-366);"></div>
+      <div style="position: absolute; left: 0; right: 0; bottom: 76px; height: 36px; background: var(--subtle-bg-mid);"></div>
+      <div style="position: absolute; left: 0; right: 0; bottom: 109px; height: 3px; background: var(--warm-grey-2);"></div>
+      <div style="position: absolute; left: 0; right: 0; bottom: 93px; height: 2px; background: var(--warm-grey-1); opacity: .8;"></div>
+      <div style="position: absolute; left: 0; right: 0; bottom: 76px; height: 2px; background: var(--warm-grey-2);"></div>
+      <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 76px; background: var(--white);"></div>
+      <div style="position: absolute; left: 2%; top: 10px; width: 46px; height: 46px; border-radius: 50%; background: var(--yellow-143);"></div>
+    </div>
+    <div aria-hidden="true" style="{{ celebrateStyle }}"></div>
+
+    <div role="group" aria-label="A five-step process: understand the landscape, discover the customer, know your boundaries, design the solution, next steps." style="position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: end; gap: 0; padding: 22px 8px 0;">
+      <sc-for list="{{ houses }}" as="h" hint-placeholder-count="5">
+        <button type="button" class="step-house" onClick="{{ h.onClick }}" aria-pressed="{{ h.visited }}" style="{{ h.buttonStyle }}" style-hover="transform: translateY(-3px) scale(1.03);">
+          <span aria-hidden="true" style="{{ h.badgeStyle }}">{{ h.n }}</span>
+          <span style="{{ h.artStyle }}">
+            <sc-if value="{{ h.s1 }}" hint-placeholder-val="{{ true }}">
+              <svg viewBox="0 0 200 176" width="100%" style="display: block; overflow: visible;" aria-hidden="true">
+                <rect x="132" y="44" width="14" height="36" fill="var(--green-3302)"></rect>
+                <polygon points="28,98 100,44 172,98" fill="var(--green-3302)"></polygon>
+                <rect x="46" y="96" width="108" height="74" fill="var(--warm-grey-1)" stroke="var(--ink)" stroke-width="1.6"></rect>
+                <rect x="88" y="126" width="26" height="44" fill="var(--green-3415)"></rect>
+                <circle cx="108" cy="150" r="2.2" fill="var(--warm-grey-1)"></circle>
+                <rect x="58" y="110" width="26" height="24" fill="var(--subtle-bg-light)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                <line x1="71" y1="110" x2="71" y2="134" stroke="var(--ink)" stroke-width="1"></line>
+                <line x1="58" y1="122" x2="84" y2="122" stroke="var(--ink)" stroke-width="1"></line>
+                <rect x="124" y="110" width="26" height="24" fill="var(--subtle-bg-light)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                <line x1="137" y1="110" x2="137" y2="134" stroke="var(--ink)" stroke-width="1"></line>
+                <line x1="124" y1="122" x2="150" y2="122" stroke="var(--ink)" stroke-width="1"></line>
+                <g style="{{ h.detailStyle }}">
+                  <rect x="58" y="110" width="26" height="24" fill="var(--yellow-143)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                  <rect x="124" y="110" width="26" height="24" fill="var(--yellow-143)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                  <line x1="71" y1="110" x2="71" y2="134" stroke="var(--ink)" stroke-width="1"></line>
+                  <line x1="58" y1="122" x2="84" y2="122" stroke="var(--ink)" stroke-width="1"></line>
+                  <line x1="137" y1="110" x2="137" y2="134" stroke="var(--ink)" stroke-width="1"></line>
+                  <line x1="124" y1="122" x2="150" y2="122" stroke="var(--ink)" stroke-width="1"></line>
+                  <polygon points="48,144 58,134 58,158" fill="var(--yellow-143)" opacity=".45"></polygon>
+                  <polygon points="160,144 150,134 150,158" fill="var(--yellow-143)" opacity=".45"></polygon>
+                </g>
+              </svg>
+            </sc-if>
+            <sc-if value="{{ h.s2 }}" hint-placeholder-val="{{ true }}">
+              <svg viewBox="0 0 200 176" width="100%" style="display: block; overflow: visible;" aria-hidden="true">
+                <polygon points="26,102 58,58 142,58 174,102" fill="var(--green-3302)"></polygon>
+                <rect x="40" y="100" width="120" height="70" fill="var(--warm-grey-1)" stroke="var(--ink)" stroke-width="1.6"></rect>
+                <rect x="66" y="120" width="68" height="7" fill="var(--green-3415)"></rect>
+                <rect x="68" y="127" width="5" height="43" fill="var(--green-3415)"></rect>
+                <rect x="127" y="127" width="5" height="43" fill="var(--green-3415)"></rect>
+                <rect x="88" y="130" width="24" height="40" fill="var(--green-3415)"></rect>
+                <circle cx="106" cy="152" r="2.2" fill="var(--warm-grey-1)"></circle>
+                <rect x="52" y="104" width="24" height="14" fill="var(--subtle-bg-light)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                <line x1="64" y1="104" x2="64" y2="118" stroke="var(--ink)" stroke-width="1"></line>
+                <rect x="124" y="104" width="24" height="14" fill="var(--subtle-bg-light)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                <line x1="136" y1="104" x2="136" y2="118" stroke="var(--ink)" stroke-width="1"></line>
+                <g style="{{ h.detailStyle }}">
+                  <rect x="52" y="104" width="24" height="14" fill="var(--yellow-143)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                  <rect x="124" y="104" width="24" height="14" fill="var(--yellow-143)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                  <line x1="64" y1="104" x2="64" y2="118" stroke="var(--ink)" stroke-width="1"></line>
+                  <line x1="136" y1="104" x2="136" y2="118" stroke="var(--ink)" stroke-width="1"></line>
+                </g>
+              </svg>
+            </sc-if>
+            <sc-if value="{{ h.s3 }}" hint-placeholder-val="{{ true }}">
+              <svg viewBox="0 0 200 176" width="100%" style="display: block; overflow: visible;" aria-hidden="true">
+                <polygon points="44,102 100,40 156,102" fill="var(--green-3302)"></polygon>
+                <rect x="58" y="100" width="84" height="70" fill="var(--warm-grey-1)" stroke="var(--ink)" stroke-width="1.6"></rect>
+                <rect x="88" y="128" width="24" height="42" fill="var(--green-3415)"></rect>
+                <circle cx="106" cy="150" r="2.2" fill="var(--warm-grey-1)"></circle>
+                <rect x="68" y="110" width="22" height="22" fill="var(--subtle-bg-light)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                <line x1="79" y1="110" x2="79" y2="132" stroke="var(--ink)" stroke-width="1"></line>
+                <rect x="110" y="110" width="22" height="22" fill="var(--subtle-bg-light)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                <line x1="121" y1="110" x2="121" y2="132" stroke="var(--ink)" stroke-width="1"></line>
+                <g style="{{ h.detailStyle }}">
+                  <rect x="10" y="150" width="180" height="5" fill="var(--green-3405)"></rect>
+                  <rect x="10" y="164" width="180" height="5" fill="var(--green-3405)"></rect>
+                  <rect x="12" y="142" width="6" height="30" fill="var(--green-3302)"></rect>
+                  <rect x="40" y="142" width="6" height="30" fill="var(--green-3302)"></rect>
+                  <rect x="68" y="142" width="6" height="30" fill="var(--green-3302)"></rect>
+                  <rect x="126" y="142" width="6" height="30" fill="var(--green-3302)"></rect>
+                  <rect x="154" y="142" width="6" height="30" fill="var(--green-3302)"></rect>
+                  <rect x="182" y="142" width="6" height="30" fill="var(--green-3302)"></rect>
+                </g>
+              </svg>
+            </sc-if>
+            <sc-if value="{{ h.s4 }}" hint-placeholder-val="{{ true }}">
+              <svg viewBox="0 0 200 176" width="100%" style="display: block; overflow: visible;" aria-hidden="true">
+                <polygon points="28,110 100,62 172,110" fill="var(--green-3302)"></polygon>
+                <rect x="44" y="108" width="112" height="62" fill="var(--warm-grey-1)" stroke="var(--ink)" stroke-width="1.6"></rect>
+                <rect x="86" y="128" width="26" height="42" fill="var(--green-3415)"></rect>
+                <circle cx="106" cy="150" r="2.2" fill="var(--warm-grey-1)"></circle>
+                <rect x="56" y="118" width="22" height="20" fill="var(--subtle-bg-light)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                <line x1="67" y1="118" x2="67" y2="138" stroke="var(--ink)" stroke-width="1"></line>
+                <rect x="122" y="118" width="22" height="20" fill="var(--subtle-bg-light)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                <line x1="133" y1="118" x2="133" y2="138" stroke="var(--ink)" stroke-width="1"></line>
+                <g style="{{ h.detailStyle }}">
+                  <polygon points="112,73 152,101 152,110 112,82" fill="var(--blue-285)" stroke="var(--ink)" stroke-width="1.4"></polygon>
+                  <line x1="112" y1="76" x2="152" y2="104" stroke="var(--blue-2985)" stroke-width="1.2"></line>
+                  <line x1="112" y1="79" x2="152" y2="107" stroke="var(--blue-2985)" stroke-width="1.2"></line>
+                  <line x1="125" y1="82" x2="125" y2="91" stroke="var(--blue-2985)" stroke-width="1.2"></line>
+                  <line x1="138" y1="91" x2="138" y2="100" stroke="var(--blue-2985)" stroke-width="1.2"></line>
+                </g>
+              </svg>
+            </sc-if>
+            <sc-if value="{{ h.s5 }}" hint-placeholder-val="{{ true }}">
+              <svg viewBox="0 0 200 176" width="100%" style="display: block; overflow: visible;" aria-hidden="true">
+                <rect x="104" y="58" width="12" height="32" fill="var(--green-3302)"></rect>
+                <polygon points="20,104 84,52 148,104" fill="var(--green-3302)"></polygon>
+                <rect x="34" y="102" width="98" height="68" fill="var(--warm-grey-1)" stroke="var(--ink)" stroke-width="1.6"></rect>
+                <rect x="52" y="128" width="24" height="42" fill="var(--green-3415)"></rect>
+                <circle cx="70" cy="150" r="2.2" fill="var(--warm-grey-1)"></circle>
+                <rect x="90" y="112" width="26" height="22" fill="var(--subtle-bg-light)" stroke="var(--ink)" stroke-width="1.2"></rect>
+                <line x1="103" y1="112" x2="103" y2="134" stroke="var(--ink)" stroke-width="1"></line>
+                <line x1="90" y1="123" x2="116" y2="123" stroke="var(--ink)" stroke-width="1"></line>
+                <g style="{{ h.detailStyle }}">
+                  <rect x="158" y="106" width="7" height="64" fill="var(--green-3302)"></rect>
+                  <polygon points="150,110 196,110 206,124 196,138 150,138" fill="var(--orange-1495)" stroke="var(--ink)" stroke-width="1.6"></polygon>
+                  <polygon points="172,116 186,124 172,132" fill="var(--ink)"></polygon>
+                </g>
+              </svg>
+            </sc-if>
+          </span>
+          <span style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 3px; padding: 10px 4px 0; height: 76px; box-sizing: border-box;">
+            <span style="font-size: 14px; font-weight: 600; line-height: 1.25; color: var(--ink); text-align: center; text-wrap: pretty; min-height: 36px;">{{ h.name }}</span>
+            <span style="{{ h.visitedStyle }}">{{ h.visitedLabel }}</span>
+          </span>
+        </button>
+      </sc-for>
+    </div>
+   </div>
+
+    <div aria-live="polite" ref="{{ panelRef }}" style="{{ panelStyle }}">
+      <sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">
+        <div role="dialog" aria-label="Step detail" style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: start; padding: 24px 24px 26px; background: var(--green-3302); color: var(--white);">
+          <div>
+            <p style="margin: 0 0 6px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--green-366);">Step {{ panelN }} &#183; {{ panelModule }}</p>
+            <h3 style="font-family: var(--font-display); font-weight: 500; font-size: clamp(20px, 2.6vw, 28px); line-height: 1.15; margin: 0 0 10px;">{{ panelName }}</h3>
+            <p style="margin: 0 0 10px; max-width: 74ch; font-size: 16px; line-height: 1.55; color: var(--white);">{{ panelDesc }}</p>
+            <p style="margin: 0; font-size: 15px; font-weight: 700; color: var(--green-366);">{{ panelTime }}</p>
+          </div>
+          <x-import component-from-global-scope="TAFEGippsland_cdfa85.Button" variant="reversed" size="small" arrow="{{ false }}" onClick="{{ close }}" aria-label="Close step detail" hint-size="auto,34px">Close</x-import>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+
+  <p style="margin: 14px 0 0; font-size: 14px; color: var(--text-caption);">The five steps, and the order they depend on.</p>
+  <p style="{{ doneStyle }}">All five steps opened &#8212; the street is lit.</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1140,&quot;height&quot;:700}}">
+const STEPS = [
+  { n: 1, name: "Understand the landscape", module: "Module 1", time: "About 50 minutes",
+    desc: "What home electrification is, what the technologies actually do, and what a household's journey looks like. This is the vocabulary the rest of the course uses." },
+  { n: 2, name: "Discover the customer", module: "Module 2", time: "About 55 minutes",
+    desc: "A structured way to find out what a household is trying to achieve and what their home allows, before anything is recommended. You finish with a discovery guide you keep." },
+  { n: 3, name: "Know your boundaries", module: "Module 3", time: "About 25 minutes",
+    desc: "Where general information stops for your role, and how to say so without losing the customer. It sits here rather than at the end because you need to know your scope before you shape a recommendation, not after." },
+  { n: 4, name: "Design the solution", module: "Module 4", time: "About 50 minutes",
+    desc: "Turning what you found out into a staged, whole-of-home pathway the household can afford to start." },
+  { n: 5, name: "Next steps", module: "Module 5", time: "About 30 minutes",
+    desc: "Referring well, building credibility, and where to find information that's current. You finish with your own action plan." }
+];
+
+class Component extends DCLogic {
+  state = { visited: [], open: null, celebrate: false };
+
+  componentDidMount() {
+    this.reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.onKey = (e) => { if (e.key === "Escape" && this.state.open !== null) this.setState({ open: null }); };
+    this.onDown = (e) => {
+      if (this.state.open === null) return;
+      const root = this.panelRef && this.panelRef.current;
+      if (root && !root.contains(e.target) && !e.target.closest(".step-house")) this.setState({ open: null });
+    };
+    document.addEventListener("keydown", this.onKey);
+    document.addEventListener("mousedown", this.onDown);
+    this.forceUpdate();
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.onKey);
+    document.removeEventListener("mousedown", this.onDown);
+    clearTimeout(this.timer);
+  }
+
+  open(i) {
+    const visited = this.state.visited.includes(i) ? this.state.visited : this.state.visited.concat(i);
+    const finished = visited.length === 5 && this.state.visited.length < 5;
+    this.setState({ visited, open: i, celebrate: finished ? true : this.state.celebrate });
+    if (finished && !this.reduced) {
+      clearTimeout(this.timer);
+      this.timer = setTimeout(() => this.setState({ celebrate: false }), 1800);
+    }
+  }
+
+  renderVals() {
+    const r = this.reduced;
+    const dur = r ? "0ms" : "420ms";
+    if (!this.panelRef) this.panelRef = React.createRef();
+    const open = this.state.open;
+    const s = open === null ? null : STEPS[open];
+
+    const houses = STEPS.map((st, i) => {
+      const on = this.state.visited.includes(i);
+      return {
+        n: st.n, name: st.name,
+        s1: i === 0, s2: i === 1, s3: i === 2, s4: i === 3, s5: i === 4,
+        visited: on ? "true" : "false",
+        visitedLabel: on ? "\u2713 Visited" : "Not started",
+        visitedStyle: "font-size:12px;font-weight:700;letter-spacing:.02em;color:" + (on ? "var(--green-3415)" : "var(--text-muted)"),
+        onClick: () => this.open(i),
+        buttonStyle: [
+          "display:flex;flex-direction:column;align-items:center;gap:2px",
+          "background:transparent;border:0;padding:0 2px;cursor:pointer;font:inherit;text-align:center",
+          "transition:transform 150ms ease, filter " + dur + " ease",
+          "filter:" + (on ? "none" : "saturate(.12)"),
+          "border-radius:0"
+        ].join(";"),
+        badgeStyle: [
+          "display:inline-flex;align-items:center;justify-content:center",
+          "width:26px;height:26px;font-size:14px;font-weight:700;font-family:var(--font-body)",
+          "background:" + (on ? "var(--green-3302)" : "var(--white)"),
+          "color:" + (on ? "var(--white)" : "var(--ink)"),
+          "border:1.5px solid var(--green-3302);margin-bottom:2px",
+          "transition:background " + dur + " ease, color " + dur + " ease"
+        ].join(";"),
+        artStyle: "display:block;width:100%;margin-bottom:36px;transition:filter " + dur + " ease;filter:" + (on ? "none" : "opacity(.92)"),
+        detailStyle: [
+          "opacity:" + (on ? 1 : 0),
+          "transform:" + (on ? "scale(1)" : "scale(.72)"),
+          "transform-origin:center",
+          "transform-box:fill-box",
+          r ? "transition:none" : "transition:opacity 260ms ease-out, transform 460ms cubic-bezier(.34,1.56,.64,1)"
+        ].join(";")
+      };
+    });
+
+    return {
+      houses,
+      open: open !== null,
+      panelRef: this.panelRef,
+      panelN: s ? s.n : "",
+      panelName: s ? s.name : "",
+      panelModule: s ? s.module : "",
+      panelDesc: s ? s.desc : "",
+      panelTime: s ? s.time : "",
+      close: () => this.setState({ open: null }),
+      panelStyle: [
+        "position:relative",
+        "transform:" + (open === null ? "translateY(14px)" : "translateY(0)"),
+        "opacity:" + (open === null ? 0 : 1),
+        "pointer-events:" + (open === null ? "none" : "auto"),
+        r ? "transition:none" : "transition:transform 200ms ease-out, opacity 200ms ease-out"
+      ].join(";"),
+      celebrateStyle: [
+        "position:absolute;inset:0;pointer-events:none;background:var(--yellow-143);opacity:0",
+        this.state.celebrate && !r ? "animation:streetGlow 1.6s ease-in-out" : ""
+      ].join(";"),
+      doneStyle: [
+        "margin:8px 0 0;font-size:14px;font-weight:700;color:var(--green-3415)",
+        "display:" + (this.state.visited.length === 5 ? "block" : "none")
+      ].join(";")
+    };
+  }
+}
+</script>
+</body>
+</html>
